@@ -8,7 +8,6 @@ import PatientRegisterPage from '@/pages/auth/PatientRegisterPage'
 import DashboardPage       from '@/pages/DashboardPage'
 
 import CasesPage      from '@/pages/health-worker/CasesPage'
-import CaseDetailPage from '@/pages/health-worker/CaseDetailPage'
 
 import { ReferralsPage, ReferralDetailPage } from '@/pages/referrals/ReferralsPage'
 
@@ -94,7 +93,6 @@ export default function App() {
             {/* CASES — health_worker, facility_admin, superadmin */}
             <Route element={<RequireRole allowed={['health_worker','facility_admin','superadmin']} />}>
               <Route path="cases"     element={<CasesPage />} />
-              <Route path="cases/:id" element={<CaseDetailPage />} />
             </Route>
 
             {/* REFERRALS — health_worker, facility_admin, superadmin */}
